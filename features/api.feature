@@ -9,7 +9,7 @@
 
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' without the authentication token
+	Scenario: Send POST request to 'standard document' without the authentication token
 		Given I have no authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-02-25  |
@@ -18,7 +18,7 @@
 		And I should receive an error from the API
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with wrong authentication
+	Scenario: Send POST request to 'standard document' with wrong authentication
 		Given I have an invalid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-02-25  |
@@ -27,7 +27,7 @@
 		And I should receive an error from the API
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication and valid search values
+	Scenario: Send POST request to 'standard document' with correct authentication and valid search values
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-04-22  |
@@ -36,7 +36,7 @@
 		And I should receive the requested data from the API
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication but with no results found
+	Scenario: Send POST request to 'standard document' with correct authentication but with no results found
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |some random data  |
@@ -45,7 +45,7 @@
 		And the error code returned by the API should be '1201'
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication but without 'dataIncarcare'
+	Scenario: Send POST request to 'standard document' with correct authentication but without 'dataIncarcare'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |             |
@@ -54,7 +54,7 @@
 		And the error code returned by the API should be '1101'
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication but without 'page'
+	Scenario: Send POST request to 'standard document' with correct authentication but without 'page'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -63,7 +63,7 @@
 		And the error code returned by the API should be '1102'
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication but with 'page' as a text
+	Scenario: Send POST request to 'standard document' with correct authentication but with 'page' as a text
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -72,7 +72,7 @@
 		And the error code returned by the API should be '1107'
 
 	@api @api_standard
-	Scenario: Send POST request to 'Functia hotarari standard' with correct authentication but with 'page' as a negative number
+	Scenario: Send POST request to 'standard document' with correct authentication but with 'page' as a negative number
 		Given I have a valid authentication token
 		And I send a POST request to the 'getstandard' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -85,7 +85,7 @@
 
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' without the authentication token
+	Scenario: Send POST request to 'extended document' without the authentication token
 		Given I have no authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25  |
@@ -94,7 +94,7 @@
 		And I should receive an error from the API
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with wrong authentication
+	Scenario: Send POST request to 'extended document' with wrong authentication
 		Given I have an invalid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25  |
@@ -103,7 +103,7 @@
 		And I should receive an error from the API
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication and valid search values
+	Scenario: Send POST request to 'extended document' with correct authentication and valid search values
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25  |
@@ -112,7 +112,7 @@
 		And I should receive the requested data from the API
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication but with no results found
+	Scenario: Send POST request to 'extended document' with correct authentication but with no results found
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |some random data  |
@@ -121,7 +121,7 @@
 		And the error code returned by the API should be '1202'
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication but without 'dataIncarcare'
+	Scenario: Send POST request to 'extended document' with correct authentication but without 'dataIncarcare'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |             |
@@ -130,7 +130,7 @@
 		And the error code returned by the API should be '1103'
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication but without 'page'
+	Scenario: Send POST request to 'extended document' with correct authentication but without 'page'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -139,7 +139,7 @@
 		And the error code returned by the API should be '1104'
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication but with 'page' as a text
+	Scenario: Send POST request to 'extended document' with correct authentication but with 'page' as a text
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -148,7 +148,7 @@
 		And the error code returned by the API should be '1108'
 
 	@api @api_extended
-	Scenario: Send POST request to 'Functia hotarari extinse' with correct authentication but with 'page' as a negative number
+	Scenario: Send POST request to 'extended document' with correct authentication but with 'page' as a negative number
 		Given I have a valid authentication token
 		And I send a POST request to the 'getextended' method with the values:
 		|dataIncarcare  |2010-02-25   |
@@ -161,7 +161,7 @@
 
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' without the authentication token
+	Scenario: Send POST request to 'search document' without the authentication token
 		Given I have no authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |883/2013    |
@@ -170,7 +170,7 @@
 		And I should receive an error from the API
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with wrong authentication
+	Scenario: Send POST request to 'search document' with wrong authentication
 		Given I have an invalid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |883/2013    |
@@ -179,7 +179,7 @@
 		And I should receive an error from the API
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with correct authentication and valid search values
+	Scenario: Send POST request to 'search document' with correct authentication and valid search values
 		Given I have a valid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |883/2013    |
@@ -188,7 +188,7 @@
 		And I should receive the requested data from the API
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with correct authentication but with no results found
+	Scenario: Send POST request to 'search document' with correct authentication but with no results found
 		Given I have a valid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |some random data  |
@@ -197,7 +197,7 @@
 		And the error code returned by the API should be '1203'
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with correct authentication but with no results found
+	Scenario: Send POST request to 'search document' with correct authentication but with no results found
 		Given I have a valid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |883/2013          |
@@ -206,7 +206,7 @@
 		And the error code returned by the API should be '1203'
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with correct authentication but without 'numarHotarare'
+	Scenario: Send POST request to 'search document' with correct authentication but without 'numarHotarare'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |            |
@@ -215,7 +215,7 @@
 		And the error code returned by the API should be '1105'
 
 	@api @api_one
-	Scenario: Send POST request to 'Functia cautare hotarare' with correct authentication but without 'dataHotarare'
+	Scenario: Send POST request to 'search document' with correct authentication but without 'dataHotarare'
 		Given I have a valid authentication token
 		And I send a POST request to the 'getone' method with the values:
 		|numarHotarare  |883/2013    |
@@ -228,7 +228,7 @@
 
 
 	@api @api_token
-	Scenario: Send POST request to 'Functia autentificare' with correct data
+	Scenario: Send POST request to 'get token' with correct data
 		Given I send a POST request to the 'gettoken' method with the values:
 		|grand_type    | password          |
 		|username      | test@test.com     |
@@ -239,7 +239,7 @@
 		And I should receive a valid authentication token from the API
 
 	@api @api_token
-	Scenario Outline: Send POST request to 'Functia autentificare' with invalid or incomplete data
+	Scenario Outline: Send POST request to 'get token' with invalid or incomplete data
 		Given I request a token with a <username> username, <password> password, <grand_type> grand_type, <client_id> client_id and <client_secret> client_secret
 		Then I should receive an error from the API
 
